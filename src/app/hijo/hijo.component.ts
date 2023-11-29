@@ -6,5 +6,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./hijo.component.css']
 })
 export class HijoComponent {
-  @Input() mensejeHeredado: String=""
+  mensajeParaElPadre: string ="Hola, soy el hijo!. Esto es lo unico que muestra el hijo."
 }

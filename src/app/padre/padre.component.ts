@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input, ViewChild} from '@angular/core';
+import {HijoComponent} from "../hijo/hijo.component";
 
 @Component({
   selector: 'app-padre',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent {
- mensaje : string = "Este mensaje se crea en el padre y se pasa al hijo"
+ mensajeDelHijo : string = ""
+  @ViewChild(HijoComponent) hijo: any;
+ ngAfterViewInit(){
+   this.mensajeDelHijo = this.hijo.mensajeParaElPadre
+ }
 }
