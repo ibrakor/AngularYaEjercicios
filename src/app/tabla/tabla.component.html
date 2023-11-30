@@ -1,0 +1,12 @@
+<table border="1">
+  <thead>
+  <tr>
+    <th *ngFor="let cab of cabeceras">{{cab}}</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dato of datos">
+      <td *ngFor="let campo of cabeceras">{{dato[campo]}}</td>
+    </tr>
+  </tbody>
+</table>
