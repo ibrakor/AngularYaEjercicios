@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+  <thead class="table-dark">
+  <tr >
+    <th *ngFor="let head of cabeceras" >
+      {{head}}
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let dato of datos">
+    <td *ngFor="let celda of cabeceras">
+      {{dato[celda]}}
+    </td>
+  </tr>
+  </tbody>
+</table>

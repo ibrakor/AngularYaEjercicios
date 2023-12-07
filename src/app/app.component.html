@@ -1,25 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-<table class="table table-bordered">
-  <thead></thead>
-  <tbody>
-  <tr *ngFor="let fila of celdas">
-    <td *ngFor="let celda of fila">
-      {{celda}}O <br>
-      <button class="btn btn-primary" (click)="mostrarOcultar(celda)">Mostrar/Ocultar</button>
-      <p id="{{celda}}">SOY LA {{celda}}A CELDA</p>
-    </td>
-  </tr>
-  </tbody>
-</table>
-</body>
-
-</html>
+<h2>Libros</h2>
+<app-tabla [datos]="misDatosL" [cabeceras]="misCabecerasL"></app-tabla>
+<h2>Revistas</h2>
+<app-tabla [datos]="datosRevistas" [cabeceras]="misCabecerasL"></app-tabla>
+<h2>Revistas</h2>
+<app-tabla [datos]="datosMusica" [cabeceras]="misCabecerasL"></app-tabla>
+<h2>Cine</h2>
+<app-tabla [datos]="datosCine" [cabeceras]="misCabecerasL"></app-tabla>

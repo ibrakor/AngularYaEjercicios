@@ -6,17 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  celdas = [["PRIMER", "SEGUND"], ["TERCER", "CUART"]]
+  misCabecerasL: string[] = ["Titulo", "Autor"];
+  misDatosL: any[] = [
+    { "Titulo": "El quijote", "Autor": "Cervantes" },
+    { "Titulo": "100 años de soledad", "Autor": "Gabriel García Márquez" },
+    { "Titulo": "Los pilares de la Tierra", "Autor": "Ken Follet" }
+  ];
 
-  mostrarOcultar(celda: string) {
-    let parrafo = document.getElementById(celda)
-    let visible = parrafo!!.style.display
-    if (visible == 'none') {
-      parrafo!!.style.display = 'block'
-    } else {
-      parrafo!!.style.display = 'none'
-    }
-  }
+  datosRevistas: any[] = [
+    {"Titulo": "Jara y sedal", "Autor": "A.Lopez"},
+    {"Titulo": "Pc Computer", "Autor": "MA Editorial"}
+  ]
+  datosMusica: any[] = [
+    {"Titulo": "Rapsody","Autor": "Queen"},
+    {"Titulo": "Motomami", "Autor": "Rosalia"}
+  ]
+
+  datosCine: any[] = [
+    {"Titulo": "Napoleon", "Autor": "Ridley Scott"},
+    {"Titulo": "Frozen",  "Autor": "Jennifer Lee"}
+  ]
+
 }
 
 
