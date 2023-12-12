@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
-import { DadoComponent } from './components/dado/dado.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DadoComponent
+
   ],
   imports: [
     BrowserModule
