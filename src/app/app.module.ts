@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
+import {RouterOutlet} from "@angular/router";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {FormsModule} from "@angular/forms";
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]
