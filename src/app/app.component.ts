@@ -1,22 +1,19 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {ArticulosService} from "./articulos.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   articulos: any;
-  constructor(private http: HttpClient) {
-  }
+
+  constructor(private articulosService: ArticulosService) {}
 
   ngOnInit() {
-    this.http.get("https://scratchya.com.ar/vue/datos.php")
-      .subscribe(
-        resultado => {
-          this.articulos = resultado;
-        }
-      );
+    this.articulosService.retornar()
+      .subscribe( result =>  this.articulos = result)
   }
 }
