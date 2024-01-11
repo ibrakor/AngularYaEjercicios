@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  mensaje = '';
 
+  actualizar(t: number) {
+    this.mensaje = t + '(se actualiza cada 10 segundos)';
+  }
+
+  protected readonly event = event;
 }
