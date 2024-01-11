@@ -1,19 +1,20 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
+import {AppComponent} from './app.component';
 import {RouterOutlet} from "@angular/router";
+import {SelectornumericoComponent} from './components/selectornumerico/selectornumerico.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    SelectornumericoComponent,
 
   ],
   imports: [
     BrowserModule,
-    RouterOutlet
+    RouterOutlet,
   ],
   providers: [],
   bootstrap: [AppComponent]
